@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package product;
+
+option go_package = "github.com/ChanKachan/business-card-product/pb/cardProduct;productpb";
+
+service Product {
+  rpc GetProduct (RequestProductGet) returns (ResponseProductGet);
+}
+
+message RequestProductGet {
+  RequestProductCreateData Data = 1;
+}
+
+message RequestProductCreateData {
+  int32 ID = 1;
+}
+
+message ResponseProductGet {
+  int32 Code = 1;
+}
