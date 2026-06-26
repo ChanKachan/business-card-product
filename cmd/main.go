@@ -2,7 +2,8 @@ package main
 
 import (
 	"log"
-	"visit/internal/app"
+
+	"github.com/ChanKachan/business-card-product/internal/app"
 )
 
 func main() {
