@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  # Основной сервис
+  app:
+    build: .
+    container_name: businessCardProduct
+    restart: on-failure:5
+    ports:
+      - "${GRPC_PORT}:${GRPC_PORT}"
+      - "${HTTP_SERVER_PORT}:${HTTP_SERVER_PORT}"
+    env_file:
+      - .env
+    environment:
+      TZ: Europe/Moscow
